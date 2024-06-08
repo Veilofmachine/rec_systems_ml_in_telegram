@@ -30,9 +30,9 @@ def handle_recommendation(message):
 
     if input_title in movies_cleaned['original_title'].values:
         recommendations = give_recomendations(input_title, sig)
-        response = "Recommended movies for '{}':\n".format(input_title) + "\n".join(recommendations)
+        response = "Рекомендованные фильмы '{}':\n".format(input_title) + "\n".join(recommendations)
     else:
-        response = "Movie '{}' not found in the database.".format(input_title)
+        response = "Фильм '{}' не был найден в базе данных".format(input_title)
 
     bot.reply_to(message, response)
 
